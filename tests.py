@@ -1,5 +1,7 @@
 """
-Test for allurebox
+Tests for allurebox.
+
+See README.md about how to run this test module.
 """
 
 import uuid
