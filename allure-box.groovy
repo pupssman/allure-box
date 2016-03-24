@@ -11,13 +11,13 @@ import org.eclipse.jetty.server.Server
 import org.eclipse.jetty.servlet.*
 import javax.servlet.http.*
 import javax.servlet.*
+import java.util.UUID
 import groovy.servlet.*
 import groovy.json.*
 
 class Glob {
     static final REPORTDIR = '/reports'
     static BASEURL = 'http://localhost/'  // This one is filled at startup 
-    static REPORTS = new AtomicInteger(0)
 }
 
 /**
@@ -28,7 +28,7 @@ class Glob {
 class ABServlet extends HttpServlet {
     void doPost(HttpServletRequest request, HttpServletResponse response) {
         println 'Receiving report data..'
-        def report = Glob.REPORTS.incrementAndGet()
+        def report = UUID.randomUUID()
         
         def root = "/${Glob.REPORTDIR}/${report}/"
         def input = "${root}/input"
