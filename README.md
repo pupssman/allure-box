@@ -31,4 +31,6 @@ http://localhost:8083//5/output/index.html
 Running tests
 -------------
 
-Install `pytest` and `requests` python packages, build and deploy container, run `py.test --boxurl=<container_endpoint_url> tests.py` 
+* install `pytest` and `requests` python packages
+* build and deploy container as in `Usage`
+* run `py.test --boxurl=<container_endpoint_url> tests.py`
