@@ -27,4 +27,8 @@ In [15]: d = '/trash/areports/'
 In [17]: print requests.post('http://localhost:8083/generate', files={f: open(os.path.join(d, f), 'rb').read() for f in os.listdir(d) if os.path.isfile(os.path.join(d, f))}).json()['url']
 http://localhost:8083//5/output/index.html
 ```
- 
+
+Running tests
+-------------
+
+Install `pytest` and `requests` python packages, build and deploy container, run `py.test --boxurl=<container_endpoint_url> tests.py` 
